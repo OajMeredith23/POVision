@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import Players from '../Players';
 
-
 function PlayerButton(props){
     return(
-        <button onClick={props.onClick}>
+        <button className="button" onClick={props.onClick}>
             {props.number}
         </button>
 
@@ -36,30 +35,31 @@ class Teams extends Component {
     render(){
        return ( 
             <section className="teams">
-
                 <div className="button-container blue-team">
-                    {this.state.blueTeam.map((player, i) => {
-                        return (
-                            this.renderButton(i, player.name, player.video, player)
-                            )
-                        
-                    })}
+                    <div className="team">
+                        {this.state.blueTeam.map((player, i) => {
+                            return (
+                                this.renderButton(i, player.number, player.video, player)
+                                )
+                            
+                        })}
+                    </div>
                 </div>
                 <div className="button-container main-camera">
                     {this.state.mainCamera.map((player, i) => {
                         return (
-
                             this.renderButton(i, player.name, player.video, player)
                         )
                     })}
                 </div>
                 <div className="button-container red-team">
-                   {this.state.redTeam.map((player, i) => {
-                    return (
-
-                        this.renderButton(i, player.name, player.video, player)
-                    )
-                    })}
+                    <div className="team">
+                    {this.state.redTeam.map((player, i) => {
+                        return (
+                            this.renderButton(i, player.number, player.video, player)
+                        )
+                        })}
+                    </div>
                 </div>
             </section>
         )
