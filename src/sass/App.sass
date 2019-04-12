@@ -109,11 +109,12 @@ nav
 .screen
   display: flex 
   align-items: center
-  z-index: 2
   grid-column: 1 / -1
   background: rgba(#333, .5)
   position: relative
-  overflow: hidden
+  width: 100%
+  // z-index: 22
+  // overflow: hidden
   @media(min-width: 960px)
     grid-column: 1 / span 10
     grid-row: 1 / span 3
@@ -136,6 +137,7 @@ nav
   justify-content: center 
   align-items: center
   opacity: 0
+  pointer-events: none
   &.swipe
     opacity: 1
     transition: .2s ease-out
