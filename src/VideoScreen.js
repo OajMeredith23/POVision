@@ -91,15 +91,19 @@ class VideoScreen extends Component {
 
     //Find out if the button that was clicked is a player
     let buttonPressed = newPlayer.team === "Red" || newPlayer.team === "Blue"
+
     //Wait until the swipe animation is covering the video window
-    
     setTimeout(() => {
+
       videoScreen.currentTime = timeStamp;
+      console.log(timeStamp)
+      
       this.setState({
         video: newVideo,
         player: newPlayer,
         // If the button clicked was a player, it returns true
         statsInView: buttonPressed,
+        //If false, the load screen will show
         vidPlaying: false
       }, () => {
         let loadVideo = setInterval(()=> {
