@@ -15,6 +15,7 @@ function GameStats(props){
           </p>
           <p>
             {props.goalScorer}
+            
           </p>
         </div>
 

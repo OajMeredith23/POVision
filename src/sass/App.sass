@@ -4,18 +4,21 @@
 
 @mixin grad()
   background: linear-gradient(to bottom right, $teamCol-1, $teamCol-2)
-$dev: true 
-body 
-  background: #111
-  color: white
-  min-height: 100vh
-  // display: flex 
-  // flex-direction: column 
-  // justify-content: center
-  background-image: url('/assets/blue-team-lg.png'), linear-gradient(to right bottom, #111, #444)
+@mixin gradWhite()
+  background: linear-gradient(to bottom right, white, darken(white, 10%))
+
+@mixin background()
+  background: url('/assets/bg-lg.png'), linear-gradient(to bottom right, white, darken(white, 10%))
   background-size: cover
   background-position: top left
   background-attachment: fixed
+
+$dev: true 
+body 
+  background: #111
+  color: #222
+  min-height: 100vh
+  @include background()
 
 *
   margin: 0
@@ -41,7 +44,7 @@ nav
     align-items: center 
     a, li 
       list-style: none 
-      color: white 
+      color: #222 
       text-decoration: none
       margin: 0 10px
       text-align: right
@@ -76,11 +79,8 @@ nav
   justify-content: center
   align-items: center
   transition: .8s ease-out
+  @include background()
 
-  background-image: url('/assets/blue-team-lg.png'), linear-gradient(to right bottom, #111, #444)
-  background-size: cover
-  background-position: top left
-  background-attachment: fixed
   img 
     border: 2px solid white 
     width: 75px
@@ -172,7 +172,7 @@ nav
       flex: 1
 
   background: linear-gradient(to bottom right, #0b121e, #192538) 
-    
+  @include gradWhite()
 
 
 
@@ -184,7 +184,11 @@ nav
     flex: 2
     transition: .4s ease-out
     opacity: 0
-    background: linear-gradient(to bottom right, lighten(#0b121e, 10%), lighten(#192538, 10%)) 
+    border-radius: 5px
+    border: 3px solid whitesmoke
+    // background: linear-gradient(to bottom right, lighten(#0b121e, 10%), lighten(#192538, 10%)) 
+    @include gradWhite()
+
     margin: 10px
     padding: 0 5px
     li 
@@ -209,7 +213,10 @@ $stats-margin: 0px
   position: relative
   padding: 10px
   @include grid()
+  @include gradWhite()
+
   transition: .4s ease-out
+  border-radius: 5px
   &.out-focus
     transition: .4s ease-out
     transform: translateY(50px)
@@ -233,12 +240,14 @@ $stats-margin: 0px
   display: flex 
   justify-content: center
   align-items: center
+  border-radius: 5px
+
 
 .button 
   width: 75px 
   height: 75px
   border-radius: 50% 
-  border: 5px solid whitesmoke
+  border-width: 5px
   background: transparent
   transition: .1s ease-out
   &.focused 
@@ -255,11 +264,11 @@ $stats-margin: 0px
   grid-column: span 2
   justify-content: center
   button 
-    border: 5px solid whitesmoke 
+    border: 5px solid #222 
     width: 125px 
     height: 125px 
     font-size: 16px 
-    color: white
+    // color: white
 
 .red-team, .blue-team 
   position: relative

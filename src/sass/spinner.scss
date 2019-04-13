@@ -15,11 +15,18 @@
     display: inline-block;
     position: absolute;
     top: 0;
-    background-color: whitesmoke;
+   
     border-radius: 100%;
     
     -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
     animation: sk-bounce 2.0s infinite ease-in-out;
+  }
+
+  .dot1{
+    background-color: $teamCol-1;
+  }
+  .dot2{
+    background-color: $teamCol-2;
   }
   
   .dot2 {

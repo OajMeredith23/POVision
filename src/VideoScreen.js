@@ -15,7 +15,6 @@ function setHeight(){
   let vidHeight = videoScreen.offsetHeight;
   videoScreenContainer.style.height = "";
   videoScreenContainer.style.height = vidHeight + "px";
-  console.log(vidHeight)
 }
 
 
