@@ -49,3 +49,14 @@ ReactDOM.render(<App />, document.getElementById('root'));
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+window.addEventListener("load", function(){
+  // let yt = document.getElementById('youtube_video');
+  var player;
+  
+  function onYouTubePlayerAPIReady() {
+    player = new YT.Player('player')
+  }
+
+  
+})

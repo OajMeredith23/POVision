@@ -25,12 +25,12 @@ class VideoScreen extends Component {
     super(props);
     let mounted;
     this.state = {
-      video: '/assets/test-videos/Abstract - 20070-1.mp4',
+      video: 'https://www.youtube.com/embed/Mn4QHP-7Y7k',
       player: '',
       goals: '0-0',
       goalScorer: '',
       statsInView: false,
-      loading: true,
+      loading: false,
       vidPlaying: true,
       timeStamp: 0
     }

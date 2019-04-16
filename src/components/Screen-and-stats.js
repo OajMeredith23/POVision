@@ -52,7 +52,7 @@ class VidScreen extends Component{
   }
   
   componentDidMount(){
-    var video = document.querySelector('video');
+    var video = document.getElementById('video');
     
       setInterval(() => {
         this.props.timeStamp(Math.round(video.currentTime))
@@ -74,7 +74,10 @@ class VidScreen extends Component{
         <div className={"swipe-animation " + (!this.props.loading ? "swipe" : "")}>
           <Spinner/>
         </div>
-        <video controls autoPlay muted src={this.props.video} id="video"></video>
+        {/* <video controls autoPlay muted src={this.props.video} id="video"></video> */}
+        <iframe 
+        src={this.props.video} id="video" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen>
+        </iframe>
       </section>
     )
   }
