@@ -47,7 +47,6 @@ nav
       text-align: right
 
 .container 
-
   max-width: 1280px
   padding-top: 10px
   margin: 0 auto
@@ -76,7 +75,6 @@ nav
   justify-content: center
   align-items: center
   transition: .8s ease-out
-
   background-image: url('/assets/blue-team-lg.png'), linear-gradient(to right bottom, #111, #444)
   background-size: cover
   background-position: top left
@@ -113,8 +111,7 @@ nav
   background: rgba(#333, .5)
   position: relative
   width: 100%
-  // z-index: 22
-  // overflow: hidden
+  // height: 588px
   @media(min-width: 960px)
     grid-column: 1 / span 10
     grid-row: 1 / span 3
@@ -125,11 +122,12 @@ nav
 
 .swipe-animation 
   position: absolute
-  top: 0
+  top: -10px
+  bottom: -10px
   left: 0
   width: 100%
   opacity: 1
-  height: 100%
+  height: calc(100% + 20px)
   @include grad()
   // transform: translate(0, -100%)
   transition: .2s ease-out
@@ -298,3 +296,10 @@ $stats-margin: 0px
   @media(min-width: 960px)
     grid-column: 1 / span 5
 
+.pageTransition-enter
+  opacity: .5
+  z-index: 1 
+
+.pageTransition-enter.pageTransition-enter-active 
+  opacity: 1
+  transition: opacity 250ms ease-in

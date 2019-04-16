@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom';
 import './index.scss';
 import VideoScreen from './VideoScreen';
 import * as serviceWorker from './serviceWorker';
+import About from './About';
 
 function AppRouter() {
     return (
@@ -30,13 +31,7 @@ function AppRouter() {
     );
   }
 
-function About(){
-    return(
-        <div className="about">
-            <h1>About!</h1>
-        </div>
-    )
-}
+
 
 class App extends Component{
     render(){

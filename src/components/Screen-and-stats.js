@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Spring  } from 'react-spring';
 
 import {useSpring, animated} from 'react-spring'
 import Spinner from './Spinner';
@@ -39,21 +38,39 @@ function GameStats(props){
 
   
 
-      
-        
-      
-
-// }
+    
 
 
   
 class VidScreen extends Component{
 
+  constructor(props){
+    super(props)
+    this.state = {
+      height: ''
+    }
+  }
+  
+  componentDidMount(){
+    var video = document.querySelector('video');
+    
+      setInterval(() => {
+        this.props.timeStamp(Math.round(video.currentTime))
+      }, 1000)
+      
+      let setVidHeight = setInterval(() => {
+        if(video.readyState === 4){
+          this.setState({height: video.offsetHeight})
+          clearInterval(setVidHeight)
+        }
+      })
+  }
 
+  
   render(){
     return (
       
-      <section className={"screen "}>
+      <section className="screen" style={{height: this.state.height}}>
         <div className={"swipe-animation " + (!this.props.loading ? "swipe" : "")}>
           <Spinner/>
         </div>
@@ -71,7 +88,7 @@ export default class ScreenAndStats extends Component{
         <section className="screen-and-stats">
 
               <GameStats player={this.props.player} goals={this.props.goals} statsInView={this.props.statsInView} />
-              <VidScreen video={this.props.video} visible={this.props.statsVisible} loading={this.props.videoPlaying}/>
+              <VidScreen video={this.props.video} visible={this.props.statsVisible} loading={this.props.videoPlaying} timeStamp={this.props.timeStamp}/>
                             
             
             
