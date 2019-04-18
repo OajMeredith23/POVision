@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import Spinner from './Spinner';
+
+import { Transition } from "react-transition-group";
+import { animateIn, animateOut } from "./Animations";
+
 function GameStats(props){
   
   
@@ -17,6 +21,7 @@ function GameStats(props){
   
           <div className="player-stats" >
             <h1>Player Stats</h1>
+            <Transition key={props.player.name} timeout={300} in appear onEnter={animateIn}>
               <ul>
                 <li>
                   {props.player.name}
@@ -28,6 +33,7 @@ function GameStats(props){
                   {props.player.number}
                 </li>
               </ul>
+            </Transition>
           </div>
       </div>
     )
