@@ -23,9 +23,9 @@ class VideoScreen extends Component {
   
   constructor(props){
     super(props);
-    let mounted;
+
     this.state = {
-      video: '/assets/test-videos/Abstract - 20070-1.mp4',
+      video: '/assets/main-camera-small.mp4',
       player: '',
       goals: '0-0',
       goalScorer: '',
@@ -42,6 +42,7 @@ class VideoScreen extends Component {
     let videoReady = document.getElementById('video');
 
       let loadScreen = setInterval(() => { 
+        console.log("READY STATE: " + videoReady.readyState)
         if(videoReady.readyState === 4){
             this.setState({
               loading: false
@@ -50,7 +51,7 @@ class VideoScreen extends Component {
         }
   
 
-    })
+    }, 500)
 
   }
 
@@ -84,16 +85,19 @@ class VideoScreen extends Component {
       }, () => {
         let loadVideo = setInterval(()=> {
           
-          videoScreen.currentTime = timeStamp;
+          console.log("Change ready?: " + videoScreen.readyState)
           if(videoScreen.readyState === 4 && videoScreen.currentTime < videoScreen.duration){
-
+            
             setTimeout(() => {
-
-              this.setState({
-                vidPlaying: true
-              }, () => { 
-                clearInterval(loadVideo)
-              })
+              videoScreen.currentTime = timeStamp;
+              videoScreen.play()
+              if(!videoScreen.paused){
+                this.setState({
+                  vidPlaying: true
+                }, () => { 
+                  clearInterval(loadVideo)
+                })
+              }
 
             }, 400)
           }

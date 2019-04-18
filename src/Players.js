@@ -2,13 +2,13 @@ const players = [
     {
         name: "Main Camera",
         team: 'None',
-        video: '/assets/test-videos/Abstract - 20070-1.mp4'
+        video: '/assets/main-camera-small-2.mp4'
     }, {
         name: 'Isaac Asimov', 
         team: 'Red',
         number: 1,
         position: 'Forward', 
-        video: '/assets/test-videos/Abstract - 20070-2.mp4',
+        video: '/assets/main-camera-small.mp4',
         goals: true,
         goalData: {
             numScored: 2,
@@ -20,7 +20,7 @@ const players = [
         team: 'Red',
         number: 2,
         position: 'Forward', 
-        video: '/assets/test-videos/Abstract - 20070-2.mp4',
+        video: '/assets/main-camera-small.mp4',
         goals: true,
         goalData: {
             numScored: 2,
@@ -32,7 +32,7 @@ const players = [
         team: 'Red',
         number: 3,
         position: 'Forward', 
-        video: '/assets/test-videos/Abstract - 20070-2.mp4',
+        video: '/assets/main-camera-small.mp4',
         goals: true,
         goalData: {
             numScored: 2,
@@ -44,7 +44,7 @@ const players = [
         team: 'Red',
         number: 4,
         position: 'Forward', 
-        video: '/assets/test-videos/Abstract - 20070-2.mp4',
+        video: '/assets/main-camera-small-3.mp4',
         goals: true,
         goalData: {
             numScored: 2,
@@ -56,7 +56,7 @@ const players = [
         team: 'Red',
         number: 5,
         position: 'Forward', 
-        video: '/assets/test-videos/Abstract - 20070-2.mp4',
+        video: '/assets/main-camera-small-3.mp4',
         goals: true,
         goalData: {
             numScored: 2,
@@ -68,7 +68,7 @@ const players = [
         team: 'Red',
         number: 6,
         position: 'Forward', 
-        video: '/assets/test-videos/Abstract - 20070-2.mp4',
+        video: '/assets/main-camera-small-3.mp4',
         goals: true,
         goalData: {
             numScored: 2,
@@ -80,7 +80,7 @@ const players = [
         team: 'Blue',
         number: 1,
         position: 'Defender', 
-        video: '/assets/test-videos/Abstract - 20070-3.mp4',
+        video: '/assets/main-camera-small.mp4',
         goals: null
     }, 
     {
@@ -88,7 +88,7 @@ const players = [
         team: 'Blue',
         number: 2,
         position: 'Mid-field', 
-        video: '/assets/test-videos/Abstract - 20070-4.mp4',
+        video: '/assets/main-camera-small.mp4',
         goals: true,
         goalData: {
             numScored: 2,
@@ -100,7 +100,7 @@ const players = [
         team: 'Blue',
         number: 3,
         position: 'Mid-field', 
-        video: '/assets/test-videos/Abstract - 20070-4.mp4',
+        video: '/assets/main-camera-small.mp4',
         goals: true,
         goalData: {
             numScored: 2,
@@ -112,7 +112,7 @@ const players = [
         team: 'Blue',
         number: 4,
         position: 'Mid-field', 
-        video: '/assets/test-videos/Abstract - 20070-4.mp4',
+        video: '/assets/main-camera-small-3.mp4',
         goals: true,
         goalData: {
             numScored: 2,
@@ -124,7 +124,7 @@ const players = [
         team: 'Blue',
         number: 5,
         position: 'Mid-field', 
-        video: '/assets/test-videos/Abstract - 20070-4.mp4',
+        video: '/assets/main-camera-small-3.mp4',
         goals: true,
         goalData: {
             numScored: 2,
@@ -136,7 +136,7 @@ const players = [
         team: 'Blue',
         number: 6,
         position: 'Mid-field', 
-        video: '/assets/test-videos/Abstract - 20070-4.mp4',
+        video: '/assets/main-camera-small-3.mp4',
         goals: true,
         goalData: {
             numScored: 2,
