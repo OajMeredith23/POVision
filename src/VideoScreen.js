@@ -88,18 +88,16 @@ class VideoScreen extends Component {
           console.log("Change ready?: " + videoScreen.readyState)
           if(videoScreen.readyState === 4 && videoScreen.currentTime < videoScreen.duration){
             
+            videoScreen.currentTime = timeStamp;
             setTimeout(() => {
-              videoScreen.currentTime = timeStamp;
-              videoScreen.play()
-              if(!videoScreen.paused){
                 this.setState({
                   vidPlaying: true
                 }, () => { 
                   clearInterval(loadVideo)
                 })
-              }
+              
 
-            }, 400)
+            }, 0)
           }
         }, 100)
       })

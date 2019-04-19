@@ -2,13 +2,13 @@ const players = [
     {
         name: "Main Camera",
         team: 'None',
-        video: '/assets/main-camera-small-2.mp4'
+        video: '/assets/main-camera-small.mp4'
     }, {
         name: 'Isaac Asimov', 
-        team: 'Red',
+        team: 'Blue',
         number: 1,
         position: 'Forward', 
-        video: '/assets/main-camera-small.mp4',
+        video: '/assets/1080p/Blue-team/Player-1.mp4',
         goals: true,
         goalData: {
             numScored: 2,
@@ -16,11 +16,47 @@ const players = [
         }
     }, 
     {
-        name: 'Isaac Asimov', 
+        name: 'PKD', 
+        team: 'Blue',
+        number: 2,
+        position: 'Forward', 
+        video: '/assets/1080p/Blue-team/Player-2.mp4',
+        goals: true,
+        goalData: {
+            numScored: 2,
+            goalTimes: [4, 6] //Provide in seconds
+        }
+    },
+    {
+        name: 'Aldous Huxley', 
+        team: 'Blue',
+        number: 3,
+        position: 'Forward', 
+        video: '/assets/1080p/Blue-team/Player-3.mp4',
+        goals: true,
+        goalData: {
+            numScored: 2,
+            goalTimes: [4, 6] //Provide in seconds
+        }
+    },
+    {
+        name: 'George Orwell', 
+        team: 'Red',
+        number: 1,
+        position: 'Forward', 
+        video: '/assets/1080p/Red-team/Player-1-RedTeam.mp4',
+        goals: true,
+        goalData: {
+            numScored: 2,
+            goalTimes: [4, 6] //Provide in seconds
+        }
+    },
+    {
+        name: 'Margerat Atwood', 
         team: 'Red',
         number: 2,
         position: 'Forward', 
-        video: '/assets/main-camera-small.mp4',
+        video: '/assets/1080p/Red-team/Player-2-RedTeam.mp4',
         goals: true,
         goalData: {
             numScored: 2,
@@ -32,43 +68,7 @@ const players = [
         team: 'Red',
         number: 3,
         position: 'Forward', 
-        video: '/assets/main-camera-small.mp4',
-        goals: true,
-        goalData: {
-            numScored: 2,
-            goalTimes: [4, 6] //Provide in seconds
-        }
-    },
-    {
-        name: 'Isaac Asimov', 
-        team: 'Red',
-        number: 4,
-        position: 'Forward', 
-        video: '/assets/main-camera-small-3.mp4',
-        goals: true,
-        goalData: {
-            numScored: 2,
-            goalTimes: [4, 6] //Provide in seconds
-        }
-    },
-    {
-        name: 'Isaac Asimov', 
-        team: 'Red',
-        number: 5,
-        position: 'Forward', 
-        video: '/assets/main-camera-small-3.mp4',
-        goals: true,
-        goalData: {
-            numScored: 2,
-            goalTimes: [4, 6] //Provide in seconds
-        }
-    },
-    {
-        name: 'Isaac Asimov', 
-        team: 'Red',
-        number: 6,
-        position: 'Forward', 
-        video: '/assets/main-camera-small-3.mp4',
+        video: '/assets/1080p/Red-team/Player-3-RedTeam.mp4',
         goals: true,
         goalData: {
             numScored: 2,
@@ -77,71 +77,11 @@ const players = [
     },
     {
         name: 'William Gibson', 
-        team: 'Blue',
-        number: 1,
-        position: 'Defender', 
-        video: '/assets/main-camera-small.mp4',
-        goals: null
-    }, 
-    {
-        name: 'J.G Ballard', 
-        team: 'Blue',
-        number: 2,
-        position: 'Mid-field', 
-        video: '/assets/main-camera-small.mp4',
-        goals: true,
-        goalData: {
-            numScored: 2,
-            goalTimes: [8, 10] //Provide in seconds
-        }
-    }, 
-    {
-        name: 'Phillip K. Dick', 
-        team: 'Blue',
-        number: 3,
-        position: 'Mid-field', 
-        video: '/assets/main-camera-small.mp4',
-        goals: true,
-        goalData: {
-            numScored: 2,
-            goalTimes: [8, 10] //Provide in seconds
-        }
-    }, 
-    {
-        name: 'George Orwell', 
-        team: 'Blue',
+        team: 'Red',
         number: 4,
-        position: 'Mid-field', 
-        video: '/assets/main-camera-small-3.mp4',
-        goals: true,
-        goalData: {
-            numScored: 2,
-            goalTimes: [8, 10] //Provide in seconds
-        }
-    },
-    {
-        name: 'Alduos Huxley', 
-        team: 'Blue',
-        number: 5,
-        position: 'Mid-field', 
-        video: '/assets/main-camera-small-3.mp4',
-        goals: true,
-        goalData: {
-            numScored: 2,
-            goalTimes: [8, 10] //Provide in seconds
-        }
-    }, 
-    {
-        name: 'Margaret Atwood', 
-        team: 'Blue',
-        number: 6,
-        position: 'Mid-field', 
-        video: '/assets/main-camera-small-3.mp4',
-        goals: true,
-        goalData: {
-            numScored: 2,
-            goalTimes: [8, 10] //Provide in seconds
-        }
+        position: 'Defender', 
+        video: '/assets/1080p/Red-team/Player-4-RedTeam.mp4',
+        goals: null
     }
 ]
 
