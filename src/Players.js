@@ -85,4 +85,6 @@ const players = [
     }
 ]
 
-export default players
+
+export default players;
+

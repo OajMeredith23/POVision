@@ -3,8 +3,14 @@ import './sass/App.sass';
 import ScreenAndStats from './components/Screen-and-stats'
 import Teams from './components/Teams'
 import Spinner from './components/Spinner'
+import goals from './Goals'
 
-
+let goalTimes = [];
+goals.forEach(goal => {
+  let goalTime = goal.time.split(':')
+  goalTime = (goalTime[0] * 60) + goalTime[1] * 1
+  goalTimes.push(goalTime) 
+})
 
 
 function LoadScreen(props){
@@ -42,7 +48,6 @@ class VideoScreen extends Component {
     let videoReady = document.getElementById('video');
 
       let loadScreen = setInterval(() => { 
-        console.log("READY STATE: " + videoReady.readyState)
         if(videoReady.readyState === 4){
             this.setState({
               loading: false
@@ -52,6 +57,19 @@ class VideoScreen extends Component {
   
 
     }, 500)
+
+    setInterval(() => {
+      let time = Math.floor(this.state.timeStamp);
+
+      goalTimes.map((goalTime, i) => {
+        if(time >= goalTime){
+            this.setState({goals: goals[i].score})
+          } else if(time < goalTimes[0]) {  
+            this.setState({goals: '0-0'})
+        }
+      })
+
+    }, 1000)
 
   }
 
@@ -64,6 +82,9 @@ class VideoScreen extends Component {
     }
   }
 
+  scoreKeeper = () => {
+    
+  }
 
 
   onChangeVideo(newVideo, newPlayer){
