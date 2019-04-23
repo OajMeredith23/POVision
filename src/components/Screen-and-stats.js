@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Spinner from './Spinner';
 
 import { Transition } from "react-transition-group";
-import { animateIn, animateOut } from "./Animations";
+import { animateIn } from "./Animations";
 
 function GameStats(props){
   

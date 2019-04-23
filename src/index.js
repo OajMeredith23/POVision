@@ -1,34 +1,74 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import ReactDOM from 'react-dom';
 import './index.scss';
 import VideoScreen from './VideoScreen';
 import * as serviceWorker from './serviceWorker';
 import About from './About';
+import { Transition, animated } from 'react-spring/renderprops';
 
-function AppRouter() {
+class AppRouter extends Component{
+
+  constructor(props){
+    super(props)
+    this.state = {
+      showAbout: false
+    }
+  }
+
+  showAbout(){
+    console.log("click")
+    this.setState({showAbout: !this.state.showAbout})
+  }
+  render(){
     return (
-      <Router>
-        
+      <>
           <nav>
             <ul>
-              <li>
-                <Link to="/">Home</Link>
+
+              <li onClick={this.showAbout.bind(this)}>
+                <img src={this.state.showAbout ? 'assets/home-icon.png' : 'assets/info-icon.png'} alt=""/>
               </li>
-              <li>
-                <Link to="/About/">About</Link>
-              </li>
-              <li>
-                <Link to="/TeamInfo/">Team Info</Link>
-              </li>
+
             </ul>
           </nav>
-        <Switch>
-          <Route path="/" component={VideoScreen} exact/>
-          <Route path="/About" component={About} />
-        </Switch>
-      </Router>
+      
+      <main className="container">
+      <Transition
+        native
+        items = {!this.state.showAbout}
+        from = {{ opacity: 0, transform: 'translateY(50px)'}}
+        enter = {{ opacity: 1, transform: 'translateY(0)'}}
+        leave = {{ opacity: 0, transform: 'translateY(50px)'}}
+      >
+      {show => show && (props => (
+        <animated.div style={props}>
+          <VideoScreen/>
+        </animated.div>
+      ))}
+      
+      </Transition>
+
+        <Transition
+          native
+          items = {this.state.showAbout}
+          from = {{ opacity: 0}}
+          enter = {{ opacity: 1}}
+          leave = {{ opacity: 0}}
+          delay = {this.state.showAbout ? 300 : 0}
+        >
+        {show => show && (props => (
+          <animated.div style={props}>
+              <About/>
+          </animated.div>
+        ))}
+        </Transition>
+      </main>
+
+      </>
+    
     );
+
+  }
   }
 
 
