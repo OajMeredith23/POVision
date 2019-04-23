@@ -31,7 +31,7 @@ class VideoScreen extends Component {
     super(props);
 
     this.state = {
-      video: '/assets/main-camera-small.mp4',
+      video: '/assets/720p/Red-team/Player-4.mp4',
       player: '',
       goals: '0-0',
       goalScorer: '',
