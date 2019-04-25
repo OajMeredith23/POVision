@@ -8,7 +8,7 @@ const players = [
         team: 'Blue',
         number: 1,
         position: 'Forward', 
-        video: '/assets/1080p/Blue-team/Player-1.mp4',
+        video: '/assets/720p/Blue-team/Player-1.mp4',
         goals: true,
         goalData: {
             numScored: 2,
@@ -20,7 +20,7 @@ const players = [
         team: 'Blue',
         number: 2,
         position: 'Forward', 
-        video: '/assets/1080p/Blue-team/Player-2.mp4',
+        video: '/assets/720p/Blue-team/Player-2.mp4',
         goals: true,
         goalData: {
             numScored: 2,
@@ -32,7 +32,7 @@ const players = [
         team: 'Blue',
         number: 3,
         position: 'Forward', 
-        video: '/assets/1080p/Blue-team/Player-3.mp4',
+        video: '/assets/720p/Blue-team/Player-3.mp4',
         goals: true,
         goalData: {
             numScored: 2,
@@ -44,7 +44,7 @@ const players = [
         team: 'Red',
         number: 1,
         position: 'Forward', 
-        video: '/assets/1080p/Red-team/Player-1-RedTeam.mp4',
+        video: '/assets/720p/Red-team/Player-1.mp4',
         goals: true,
         goalData: {
             numScored: 2,
@@ -56,7 +56,7 @@ const players = [
         team: 'Red',
         number: 2,
         position: 'Forward', 
-        video: '/assets/1080p/Red-team/Player-2-RedTeam.mp4',
+        video: '/assets/720p/Red-team/Player-2.mp4',
         goals: true,
         goalData: {
             numScored: 2,
@@ -68,7 +68,7 @@ const players = [
         team: 'Red',
         number: 3,
         position: 'Forward', 
-        video: '/assets/1080p/Red-team/Player-3-RedTeam.mp4',
+        video: '/assets/720p/Red-team/Player-3.mp4',
         goals: true,
         goalData: {
             numScored: 2,
@@ -80,7 +80,7 @@ const players = [
         team: 'Red',
         number: 4,
         position: 'Defender', 
-        video: '/assets/1080p/Red-team/Player-4-RedTeam.mp4',
+        video: '/assets/720p/Red-team/Player-4.mp4',
         goals: null
     }
 ]
