@@ -6,6 +6,20 @@ import * as serviceWorker from './serviceWorker';
 import About from './About';
 import { Transition, animated } from 'react-spring/renderprops';
 
+window.addEventListener('load', () => {
+
+  const btns = document.querySelectorAll('.button')
+  
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btns.forEach(btn => btn.classList.remove('focused'))
+      btn.classList.add('focused')
+      console.log(btn)
+    })
+  })
+
+})
+
 class AppRouter extends Component{
 
   constructor(props){

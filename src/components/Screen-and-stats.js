@@ -8,7 +8,7 @@ function GameStats(props){
   
   
     return( 
-      <div className={"stats " + (props.statsInView ? 'open' : '')} >
+      <div className={"stats " + (props.statsInView ? 'open' : '')} style={{marginRight: '10px solid red'}} >
           <div className="game-stats">
             <h1>Current Score</h1>
             <p>
@@ -19,19 +19,30 @@ function GameStats(props){
             </p>
           </div>
   
-          <div className="player-stats" >
+          <div className="player-stats">
             <h1>Player Stats</h1>
             <Transition key={props.player.name} timeout={300} in appear onEnter={animateIn}>
               <ul>
                 <li>
+                  <img src={props.player.image} alt=""/>
+                </li>
+                <li style={{borderRight: (props.player.team === 'Blue' ? '4px solid yellow' : '4px solid red')}}>
+                  <h2>Name</h2>
                   {props.player.name}
                 </li>
                 <li>
-                  {props.player.position}
+                  <h2>Games Played</h2>
+                  {props.player.gamesPlayed}
                 </li>
                 <li>
-                  {props.player.number}
+                  <h2>Career Goals</h2>
+                  {props.player.goalsScored}
                 </li>
+                <li>
+                  <h2>Career Assists</h2>
+                  {props.player.assists}
+                </li>
+                <div className="accent" ></div>
               </ul>
             </Transition>
           </div>

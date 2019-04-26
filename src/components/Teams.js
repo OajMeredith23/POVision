@@ -1,13 +1,23 @@
 import React, { Component } from 'react';
 import Players from '../Players';
 
-function PlayerButton(props){
-    return(
-        <button className="button" onClick={props.onClick}>
-            {props.number}
-        </button>
+class PlayerButton extends Component{
+    render(){
+        const bgStyle = {
+            backgroundImage: `url(${this.props.image})`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: (this.props.number != 'Main Camera' ? '150%' : '50%'),
+            backgroundPosition: (this.props.number != 'Main Camera' ? '50% 30%' : '50% 50%'),
+        }
 
-    )
+        return(
+            <button className="button" onClick={this.props.onClick} style={bgStyle}>
+                {/* {props.number} */}
+            </button>
+    
+        )
+
+    }
 }
 
 
@@ -25,9 +35,9 @@ class Teams extends Component {
     onChangeVideo(){
         this.props.onChangeVideo(this.state.video);
     }
-    renderButton(i, num, video, playerInfo){
+    renderButton(i, num, video, img, playerInfo){
         return (
-            <PlayerButton key={i} number={num}  onClick={() => this.props.onChangeVideo(video, playerInfo)}/>
+            <PlayerButton key={i} number={num} image={img}  onClick={() => this.props.onChangeVideo(video, playerInfo)}/>
         )
     }
 
@@ -39,7 +49,7 @@ class Teams extends Component {
                     <div className="team">
                         {this.state.blueTeam.map((player, i) => {
                             return (
-                                this.renderButton(i, player.number, player.video, player)
+                                this.renderButton(i, player.number, player.video, player.image, player)
                                 )
                             
                         })}
@@ -48,7 +58,7 @@ class Teams extends Component {
                 <div className="button-container main-camera">
                     {this.state.mainCamera.map((player, i) => {
                         return (
-                            this.renderButton(i, player.name, player.video, player)
+                            this.renderButton(i, player.name, player.video, player.image, player)
                         )
                     })}
                 </div>
@@ -56,7 +66,7 @@ class Teams extends Component {
                     <div className="team">
                     {this.state.redTeam.map((player, i) => {
                         return (
-                            this.renderButton(i, player.number, player.video, player)
+                            this.renderButton(i, player.number, player.video, player.image, player)
                         )
                         })}
                     </div>

@@ -2,86 +2,81 @@ const players = [
     {
         name: "Main Camera",
         team: 'None',
-        video: '/assets/main-camera-small.mp4'
+        video: '/assets/main-camera-small.mp4',
+        image: 'assets/main-camera.png'
     }, {
-        name: 'Isaac Asimov', 
+        name: 'Courtney Grant', 
         team: 'Blue',
         number: 1,
-        position: 'Forward', 
-        video: '/assets/720p/Blue-team/Player-1.mp4',
-        goals: true,
-        goalData: {
-            numScored: 2,
-            goalTimes: [4, 6] //Provide in seconds
-        }
+        gamesPlayed: 25, 
+        goalsScored: 16,
+        assists: 10,
+        video: '/assets/720p/Blue-team/Courtney-Grant.mp4',
+        image: '/assets/player-images/Courtney-Grant.JPG'
     }, 
     {
-        name: 'PKD', 
+        name: 'Elliot Dervish', 
         team: 'Blue',
         number: 2,
-        position: 'Forward', 
-        video: '/assets/720p/Blue-team/Player-2.mp4',
-        goals: true,
-        goalData: {
-            numScored: 2,
-            goalTimes: [4, 6] //Provide in seconds
-        }
+        gamesPlayed: 24, 
+        goalsScored: 6,
+        assists: 14,
+        video: '/assets/720p/Blue-team/Elliott-Dervish.mp4',
+        image: '/assets/player-images/Elliott-Dervish.JPG'
     },
     {
-        name: 'Aldous Huxley', 
+        name: 'Jake Luton', 
         team: 'Blue',
         number: 3,
-        position: 'Forward', 
-        video: '/assets/720p/Blue-team/Player-3.mp4',
-        goals: true,
-        goalData: {
-            numScored: 2,
-            goalTimes: [4, 6] //Provide in seconds
-        }
+        gamesPlayed: 15, 
+        goalsScored: 3,
+        assists: 4,
+        video: '/assets/720p/Blue-team/Jake-Luton.mp4',
+        image: '/assets/player-images/Jake-Luton.JPG'
+
     },
     {
-        name: 'George Orwell', 
+        name: 'Ross Brears', 
         team: 'Red',
         number: 1,
-        position: 'Forward', 
-        video: '/assets/720p/Red-team/Player-1.mp4',
-        goals: true,
-        goalData: {
-            numScored: 2,
-            goalTimes: [4, 6] //Provide in seconds
-        }
+        gamesPlayed: 25, 
+        goalsScored: 44,
+        assists: 53, 
+        video: '/assets/720p/Red-team/Ross-Brears.mp4',
+        image: '/assets/player-images/Ross-Brears.JPG'
+
     },
     {
-        name: 'Margerat Atwood', 
+        name: 'Tom Wilson', 
         team: 'Red',
         number: 2,
-        position: 'Forward', 
-        video: '/assets/720p/Red-team/Player-2.mp4',
-        goals: true,
-        goalData: {
-            numScored: 2,
-            goalTimes: [4, 6] //Provide in seconds
-        }
+        gamesPlayed: 24, 
+        goalsScored: 5,
+        assists: 16,
+        video: '/assets/720p/Red-team/Tom-Wilson.mp4',
+        image: '/assets/player-images/Tom-Wilson.JPG'
+
     },
     {
-        name: 'Isaac Asimov', 
+        name: 'T J Fillery', 
         team: 'Red',
         number: 3,
-        position: 'Forward', 
-        video: '/assets/720p/Red-team/Player-3.mp4',
-        goals: true,
-        goalData: {
-            numScored: 2,
-            goalTimes: [4, 6] //Provide in seconds
-        }
+        gamesPlayed: 25, 
+        goalsScored: 7,
+        assists: 9,
+        video: '/assets/720p/Red-team/T-J-Fillery.mp4',
+        image: '/assets/player-images/T-J-Fillery.JPG'
+
     },
     {
-        name: 'William Gibson', 
+        name: 'Ross Cowan', 
         team: 'Red',
         number: 4,
-        position: 'Defender', 
-        video: '/assets/720p/Red-team/Player-4.mp4',
-        goals: null
+        gamesPlayed: 24, 
+        goalsScored: 6,
+        assists: 10, 
+        video: '/assets/720p/Red-team/Ross-Cowan.mp4',
+        image: '/assets/player-images/Ross-Cowan.JPG'
     }
 ]
 
