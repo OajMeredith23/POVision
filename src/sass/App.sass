@@ -352,7 +352,7 @@ $stats-margin: 0px
   position: absolute
   top: 0
   left: 0
-  padding-top: 10vh
+  padding: 10vh 0
   @include grid()
   grid-gap: 30px
   h1, p, img
@@ -369,6 +369,7 @@ $stats-margin: 0px
       grid-column: 5 / -2
     img 
       grid-column: 5 / -2 
+
 .about 
   .profiles 
     grid-column: 2 / -2 
@@ -408,5 +409,10 @@ body::-webkit-scrollbar-thumb
   @include grad()
   outline: 1px solid slategrey
 
-.red 
-  bordeR: 10px solid red
+.footer 
+  max-width: 1280px 
+  margin: 0 auto
+  padding-right: 10px
+  display: flex 
+  justify-content: flex-end 
+  align-items: center 

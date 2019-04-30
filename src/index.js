@@ -68,8 +68,10 @@ class AppRouter extends Component{
               <Route path="/teamInfo/" exact component={TeamInfo} />
             </AnimatedSwitch>
           </div>
+          
       </Router>
 
+  
       </>
     
     );
