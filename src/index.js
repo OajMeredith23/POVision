@@ -42,14 +42,6 @@ class AppRouter extends Component{
   render(){
     return (
       <>
-        {/* <nav>
-          <ul>
-            <li onClick={this.showAbout.bind(this)}>
-              <img src={this.state.showAbout ? 'assets/home-icon.png' : 'assets/info-icon.png'} alt=""/>
-            </li>
-          </ul>
-        </nav> */}
-    
         <Router>
           <div>
             <nav>
@@ -65,19 +57,17 @@ class AppRouter extends Component{
                 </li>
               </ul>
             </nav>
-
-            {/* <main className="container"> */}
+            
             <AnimatedSwitch
-              atEnter={{ opacity: 0, transform: 'scale(0.8)'}}
-              atLeave={{ opacity: 0, transform: 'translateY(0.8)'}}
-              atActive={{ opacity: 1, transform: 'translateY(1)'}}
+              atEnter={{ opacity: 0}}
+              atLeave={{ opacity: 0}}
+              atActive={{ opacity: 1}}
               className="container"
             >
               <Route path="/" exact component={VideoScreen} />
               <Route path="/about/" exact component={About} />            
               <Route path="/teamInfo/" exact component={TeamInfo} />
             </AnimatedSwitch>
-            {/* </main> */}
           </div>
       </Router>
 

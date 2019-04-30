@@ -128,7 +128,7 @@ class VideoScreen extends Component {
     return (
       <>
         <LoadScreen loading={this.state.loading}/>
-        <section className="container">
+        <section className="">
             
           <ScreenAndStats 
               video = {this.state.video}

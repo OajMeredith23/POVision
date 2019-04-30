@@ -3,7 +3,7 @@ import React from 'react';
 function About(){
 
     return(
-            <section className="container about" id="about">
+            <section className="about" id="about">
                 <h1>About</h1>
                 <p>
                 POV-ision is a production company that focuses on providing viewers with the full sporting experience and control of the content they want to watch. 

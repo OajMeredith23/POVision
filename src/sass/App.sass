@@ -5,7 +5,8 @@
 @mixin grad()
   background: linear-gradient(to bottom right, $teamCol-1, $teamCol-2)
 $dev: true 
-
+html
+    overflow-y: overlay
 a 
   font-weight: 700
   color: aliceblue
@@ -64,6 +65,7 @@ nav
     padding: 20px
   transform: translateY(0)
   transition: .5s 1s ease-out
+  border: 4px solid pink
 
 
 .loadScreen-container 
@@ -71,7 +73,7 @@ nav
   top: 0 
   right: 0
   width: 100% 
-  height: 100% 
+  height: 100vh
   // transform: translateY(-100%)
   opacity: 0
   z-index: 20
@@ -361,8 +363,15 @@ $stats-margin: 0px
     p 
       grid-column: span 6
 
-.container
-  position: relative
+.teamInfo 
+  @include grid()
+body::-webkit-scrollbar
+  width: 0.5em
  
-.container > div 
-  position: absolute
+body::-webkit-scrollbar-track 
+    background: transparent
+
+body::-webkit-scrollbar-thumb
+  background-color: red
+  @include grad()
+  outline: 1px solid slategrey
