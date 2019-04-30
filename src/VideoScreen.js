@@ -47,15 +47,13 @@ class VideoScreen extends Component {
     this.mounted = true;
     let videoReady = document.getElementById('video');
 
-      let loadScreen = setInterval(() => { 
+    let loadScreen = setInterval(() => { 
         if(videoReady.readyState === 4){
             this.setState({
               loading: false
             })  
           clearInterval(loadScreen)
         }
-  
-
     }, 500)
 
     setInterval(() => {
@@ -82,9 +80,6 @@ class VideoScreen extends Component {
     }
   }
 
-  scoreKeeper = () => {
-    
-  }
 
 
   onChangeVideo(newVideo, newPlayer){

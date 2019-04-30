@@ -6,15 +6,12 @@ class PlayerButton extends Component{
         const bgStyle = {
             backgroundImage: `url(${this.props.image})`,
             backgroundRepeat: 'no-repeat',
-            backgroundSize: (this.props.number != 'Main Camera' ? '150%' : '50%'),
-            backgroundPosition: (this.props.number != 'Main Camera' ? '50% 30%' : '50% 50%'),
+            backgroundSize: (this.props.number !== 'Main Camera' ? '150%' : '50%'),
+            backgroundPosition: (this.props.number !== 'Main Camera' ? '50% 30%' : '50% 50%'),
         }
 
         return(
-            <button className="button" onClick={this.props.onClick} style={bgStyle}>
-                {/* {props.number} */}
-            </button>
-    
+            <button className="button" onClick={this.props.onClick} style={bgStyle}></button>
         )
 
     }
