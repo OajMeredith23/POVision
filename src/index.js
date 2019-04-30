@@ -9,7 +9,6 @@ import TeamInfo from './TeamInfo';
 // import { Transition, animated } from 'react-spring/renderprops';
 import { AnimatedSwitch } from 'react-router-transition';
 
-console.log(AnimatedSwitch);
 
 window.addEventListener('load', () => {
 

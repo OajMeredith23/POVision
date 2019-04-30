@@ -15,6 +15,40 @@ function About(){
                 <br/>
                 If you have any requests for specific sports please email us <a href="mailto:info@povisionproductions.com?Subject=POVision%20enquiry">info@povisionproductions.com</a> 
                 </p>
+                <ul className="profiles">
+                    <li>
+                        <img src="/assets/profile-images/alex-moss.JPG" alt=""/>
+                        <p>Alex Moss</p>
+                    </li>
+                    <li>
+                        <img src="/assets/profile-images/ashley-harris-1.JPG" alt=""/>
+                        <p>Ashley Harris</p>
+                    </li>
+                    <li>
+                        <img src="/assets/profile-images/cameron-sealby.JPG" alt=""/>
+                        <p>Cameron Sealby</p>
+                    </li>
+                    <li>
+                        <img src="/assets/profile-images/finley-redwood.JPG" alt=""/>
+                        <p>Finley Redwood</p>
+                    </li>
+                    <li>
+                        <img src="/assets/profile-images/jack-patience-1.JPG" alt=""/>
+                        <p>Jack Patience</p>
+                    </li>
+                    <li>
+                        <img src="/assets/profile-images/lozzie-rushmer-1.JPG" alt=""/>
+                        <p>Lozzie Rushmer</p>
+                    </li>
+                    <li>
+                        <img src="/assets/profile-images/sam-myes.JPG" alt=""/>
+                        <p>Sam Mays</p>
+                    </li>
+                    <li>
+                        <img src="/assets/profile-images/kieran-rundle.JPG" alt=""/>
+                        <p>Kieran Rundle</p>
+                    </li>
+                </ul>
             </section>
     )
             

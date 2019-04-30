@@ -26,7 +26,7 @@ function GameStats(props){
                 <li>
                   <img src={props.player.image} alt=""/>
                 </li>
-                <li style={{borderRight: (props.player.team === 'Blue' ? '4px solid yellow' : '4px solid red')}}>
+                <li style={{borderRight: (props.player.team === 'Yellow' ? '4px solid yellow' : '4px solid red')}}>
                   <h2>Name</h2>
                   {props.player.name}
                 </li>

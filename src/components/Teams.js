@@ -25,13 +25,10 @@ class Teams extends Component {
         this.state = {
             mainCamera: Players.filter(player => player.team === 'None'),
             redTeam: Players.filter(player => player.team === 'Red'),
-            blueTeam: Players.filter(player => player.team === 'Blue')
+            yellowTeam: Players.filter(player => player.team === 'Yellow')
         }
     }
     
-    onChangeVideo(){
-        this.props.onChangeVideo(this.state.video);
-    }
     renderButton(i, num, video, img, playerInfo){
         return (
             <PlayerButton key={i} number={num} image={img}  onClick={() => this.props.onChangeVideo(video, playerInfo)}/>
@@ -42,9 +39,9 @@ class Teams extends Component {
     render(){
        return ( 
             <section className="teams">
-                <div className="button-container blue-team">
+                <div className="button-container yellow-team">
                     <div className="team">
-                        {this.state.blueTeam.map((player, i) => {
+                        {this.state.yellowTeam.map((player, i) => {
                             return (
                                 this.renderButton(i, player.number, player.video, player.image, player)
                                 )

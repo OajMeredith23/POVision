@@ -31,7 +31,7 @@ class VideoScreen extends Component {
     super(props);
 
     this.state = {
-      video: '/assets/main-camera-small.mp4',
+      video: '/assets/720p/main-camera-small.mp4',
       player: '',
       goals: '0-0',
       goalScorer: '',
@@ -88,7 +88,7 @@ class VideoScreen extends Component {
     let timeStamp = this.state.timeStamp;
 
     //Find out if the button that was clicked is a player
-    let buttonPressed = newPlayer.team === "Red" || newPlayer.team === "Blue"
+    let buttonPressed = newPlayer.team === "Red" || newPlayer.team === "Yellow"
     //Wait until the swipe animation is covering the video window
     
     setTimeout(() => {
@@ -128,7 +128,7 @@ class VideoScreen extends Component {
     return (
       <>
         <LoadScreen loading={this.state.loading}/>
-        <section className="">
+        <section>
             
           <ScreenAndStats 
               video = {this.state.video}
