@@ -2,36 +2,36 @@ const players = [
     {
         name: "Main Camera",
         team: 'None',
-        video: '/assets/main-camera-small.mp4',
+        video: '/assets/720p/main-camera-small.mp4',
         image: 'assets/main-camera.png'
     }, {
         name: 'Courtney Grant', 
-        team: 'Blue',
+        team: 'Yellow',
         number: 1,
         gamesPlayed: 25, 
         goalsScored: 16,
         assists: 10,
-        video: '/assets/720p/Blue-team/Courtney-Grant.mp4',
+        video: '/assets/720p/Yellow-team/Courtney-Grant.mp4',
         image: '/assets/player-images/Courtney-Grant.JPG'
     }, 
     {
         name: 'Elliot Dervish', 
-        team: 'Blue',
+        team: 'Yellow',
         number: 2,
         gamesPlayed: 24, 
         goalsScored: 6,
         assists: 14,
-        video: '/assets/720p/Blue-team/Elliott-Dervish.mp4',
+        video: '/assets/720p/Yellow-team/Elliot-Dervish.mp4',
         image: '/assets/player-images/Elliott-Dervish.JPG'
     },
     {
         name: 'Jake Luton', 
-        team: 'Blue',
+        team: 'Yellow',
         number: 3,
         gamesPlayed: 15, 
         goalsScored: 3,
         assists: 4,
-        video: '/assets/720p/Blue-team/Jake-Luton.mp4',
+        video: '/assets/720p/Yellow-team/Jake-Luton.mp4',
         image: '/assets/player-images/Jake-Luton.JPG'
 
     },

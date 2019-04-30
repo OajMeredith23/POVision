@@ -5,7 +5,8 @@
 @mixin grad()
   background: linear-gradient(to bottom right, $teamCol-1, $teamCol-2)
 $dev: true 
-
+html
+    overflow-y: overlay
 a 
   font-weight: 700
   color: aliceblue
@@ -25,7 +26,8 @@ body
   margin: 0
   padding: 0
   box-sizing: border-box
-
+li 
+  list-style: none
 $navHeight: 30px
 nav 
   width: 100% 
@@ -44,7 +46,6 @@ nav
     justify-content: flex-end
     align-items: center 
     a, li 
-      list-style: none 
       color: white 
       text-decoration: none
       margin: 5px
@@ -57,21 +58,21 @@ nav
   max-width: 1280px
   padding-top: 10px
   margin: 0 auto
-  // margin-top: 10px
   position: relative
   @media(max-width: 1280px)
     max-width: 1140px
     padding: 20px
+
+section 
   transform: translateY(0)
   transition: .5s 1s ease-out
-
 
 .loadScreen-container 
   position: fixed
   top: 0 
   right: 0
   width: 100% 
-  height: 100% 
+  height: 100vh
   // transform: translateY(-100%)
   opacity: 0
   z-index: 20
@@ -82,7 +83,6 @@ nav
   justify-content: center
   align-items: center
   transition: .8s ease-out
-  // background-image: url('/assets/blue-team-lg.png'), linear-gradient(to right bottom, #111, #444)
   background-size: cover
   background-position: top left
   background-attachment: fixed
@@ -93,9 +93,11 @@ nav
   &.loadScreen 
     transition: .2s ease-out
     opacity: 1
-    & + .container 
+    & + section 
       opacity: 0
       transform: translateY(30px)
+      transition: .5s 1s ease-out
+
 
 @keyframes fadeIn 
   from 
@@ -193,7 +195,6 @@ nav
     margin: 10px
     padding: 0 5px
     li 
-      list-style: none
       margin: 10px 0
       font-weight: 700
       overflow: hidden
@@ -302,7 +303,7 @@ $stats-margin: 0px
   button 
     border: 5px solid whitesmoke 
 
-.red-team, .blue-team 
+.red-team, .yellow-team 
   position: relative
   z-index: 5
   grid-column: span 6
@@ -326,10 +327,10 @@ $stats-margin: 0px
   @media(min-width: 960px)
     grid-column: 8 / -1
 
-.blue-team 
+.yellow-team 
   justify-content: flex-end
   background: $teamCol-1
-  background-image: url('/assets/blue-team.jpg'), linear-gradient($teamCol-1, $teamCol-2)
+  background-image: url('/assets/yellow-team.jpg'), linear-gradient($teamCol-1, $teamCol-2)
   background-size: cover 
   background-position:  top left
   @media(max-width: 660px)
@@ -347,16 +348,65 @@ $stats-margin: 0px
   opacity: 1
   transition: opacity 250ms ease-in
 
-.about 
+.about, .team-info
   position: absolute
   top: 0
   left: 0
   padding-top: 10vh
   @include grid()
-  h1, p 
+  grid-gap: 30px
+  h1, p, img
     grid-column: 2 / -2
+  img
+    width: 100%
+    height: 100%
+    object-fit: contain
   @media(min-width: 960px)
     h1  
-      grid-column: 6
+      grid-column: 4 / -2
     p 
-      grid-column: span 6
+      grid-row: 2
+      grid-column: 5 / -2
+    img 
+      grid-column: 5 / -2 
+.about 
+  .profiles 
+    grid-column: 2 / -2 
+    display: flex 
+    flex-direction: column 
+    @media(min-width: 960px)
+      display: grid
+      grid-template-columns: repeat(3, 1fr)
+      grid-gap: 50px 10px
+      grid-column: 5 / -2 
+    li 
+      @media(max-width: 960px)
+        margin: 20px 0
+      width: 200px
+      height: 200px
+    img 
+      object-fit: cover
+      p 
+.team-managers 
+  grid-column: 2 / -2 
+  @media(min-width: 960px)
+    grid-column: 5 / -2 
+  li 
+    display: inline-block 
+    margin: 0 1.6%
+
+.teamInfo 
+  @include grid()
+body::-webkit-scrollbar
+  width: 0.5em
+ 
+body::-webkit-scrollbar-track 
+    background: transparent
+
+body::-webkit-scrollbar-thumb
+  background-color: red
+  @include grad()
+  outline: 1px solid slategrey
+
+.red 
+  bordeR: 10px solid red
