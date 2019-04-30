@@ -142,6 +142,9 @@ class VideoScreen extends Component {
           <Teams 
               onChangeVideo={this.onChangeVideo.bind(this)}
           />
+          <section className="footer">
+            built by <a href="http://olivermeredith.com" rel="noopener noreferrer" target="_blank"> Oliver Meredith </a>
+          </section>
         </section>
         </>
       
