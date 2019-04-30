@@ -1,10 +1,15 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import './index.scss';
 import VideoScreen from './VideoScreen';
 import * as serviceWorker from './serviceWorker';
 import About from './About';
-import { Transition, animated } from 'react-spring/renderprops';
+import TeamInfo from './TeamInfo';
+// import { Transition, animated } from 'react-spring/renderprops';
+import { AnimatedSwitch } from 'react-router-transition';
+
+console.log(AnimatedSwitch);
 
 window.addEventListener('load', () => {
 
@@ -37,45 +42,44 @@ class AppRouter extends Component{
   render(){
     return (
       <>
-        <nav>
+        {/* <nav>
           <ul>
             <li onClick={this.showAbout.bind(this)}>
               <img src={this.state.showAbout ? 'assets/home-icon.png' : 'assets/info-icon.png'} alt=""/>
             </li>
           </ul>
-        </nav>
+        </nav> */}
     
-        <main className="container">
-          <Transition
-            native
-            items = {!this.state.showAbout}
-            from = {{ opacity: 0, transform: 'translateY(50px)'}}
-            enter = {{ opacity: 1, transform: 'translateY(0)'}}
-            leave = {{ opacity: 0, transform: 'translateY(50px)'}}
-          >
-            {show => show && (props => (
-              <animated.div style={props}>
-                <VideoScreen/>
-              </animated.div>
-            ))}
-          
-          </Transition>
+        <Router>
+          <div>
+            <nav>
+              <ul>
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+                <li>
+                  <Link to="/about/">About</Link>
+                </li>
+                <li>
+                  <Link to="/teamInfo/">Team Info</Link>
+                </li>
+              </ul>
+            </nav>
 
-          <Transition
-            native
-            items = {this.state.showAbout}
-            from = {{ opacity: 0}}
-            enter = {{ opacity: 1}}
-            leave = {{ opacity: 0}}
-            delay = {this.state.showAbout ? 300 : 0}
-          >
-            {show => show && (props => (
-              <animated.div style={props}>
-                  <About/>
-              </animated.div>
-            ))}
-          </Transition>
-        </main>
+            {/* <main className="container"> */}
+            <AnimatedSwitch
+              atEnter={{ opacity: 0, transform: 'scale(0.8)'}}
+              atLeave={{ opacity: 0, transform: 'translateY(0.8)'}}
+              atActive={{ opacity: 1, transform: 'translateY(1)'}}
+              className="container"
+            >
+              <Route path="/" exact component={VideoScreen} />
+              <Route path="/about/" exact component={About} />            
+              <Route path="/teamInfo/" exact component={TeamInfo} />
+            </AnimatedSwitch>
+            {/* </main> */}
+          </div>
+      </Router>
 
       </>
     
